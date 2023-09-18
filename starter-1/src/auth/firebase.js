@@ -7,6 +7,7 @@ import {
   signOut,
   sendPasswordResetEmail,
   signInWithPopup,
+  updateProfile,
 } from "firebase/auth";
 import {
   toastErrorNotify,
