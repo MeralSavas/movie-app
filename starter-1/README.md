@@ -1,4 +1,4 @@
-# Project-006 : Movie App (RP-06)
+# Project: Movie App
 
 ## Description
 
