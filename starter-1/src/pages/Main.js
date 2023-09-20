@@ -44,9 +44,7 @@ const Main = () => {
   return (
     <>
       <form className="flex justify-center p-2" onSubmit={handleSubmit}>
-        {/* form yapmamızın avantajı enter otomatik olarak calısıyor*/}
         <input
-        // type search olmasının avantajı otomatık clear cıkıyor
           type="search"
           className="w-80 h-8 rounded-md outline-none border p-1 m-2"
           placeholder="Search a movie..."

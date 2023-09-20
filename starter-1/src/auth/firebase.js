@@ -1,12 +1,13 @@
+import { initializeApp } from "firebase/app";
 import {
-  getAuth,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  onAuthStateChanged,
+  getAuth,
   GoogleAuthProvider,
-  signOut,
+  onAuthStateChanged,
   sendPasswordResetEmail,
+  signInWithEmailAndPassword,
   signInWithPopup,
+  signOut,
   updateProfile,
 } from "firebase/auth";
 import {
@@ -15,16 +16,11 @@ import {
   toastWarnNotify,
 } from "../helpers/ToastNotify";
 
-import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-
-// Your web apps firebase configuration
-// TODO: Replace the following with your app's Firebase project configuration at project settings part
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-// https://firebase.google.com/docs/auth/web/start 
-// https://console.firebase.google.com/ => project settings
-
-
+//* Your web app's Firebase configuration
+// TODO: Replace the following with your app's Firebase project configuration
+//* https://firebase.google.com/docs/auth/web/start
+//* https://console.firebase.google.com/ => project settings
+//! firebase console settings bölümünden firebaseconfig ayarlarını al
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_apiKey,
   authDomain: process.env.REACT_APP_authDomain,
@@ -32,23 +28,10 @@ const firebaseConfig = {
   storageBucket: process.env.REACT_APP_storageBucket,
   messagingSenderId: process.env.REACT_APP_messagingSenderId,
   appId: process.env.REACT_APP_appId,
-
-  // apiKey: "AIzaSyCuIzr1qP9T1FLc8jHb6fYyTzQ3fV3Z-to",
-  // authDomain: "fir-movie-app-github.firebaseapp.com",
-  // projectId: "fir-movie-app-github",
-  // storageBucket: "fir-movie-app-github.appspot.com",
-  // messagingSenderId: "965755080318",
-  // appId: "1:965755080318:web:c0f2d00f242abeb690122f"
-
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// TODO: Replace the following with your app's Firebase project configuration at project settings part
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-
-// Initialize Firebase
-
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 
@@ -66,7 +49,7 @@ export const createUser = async (email, password, navigate, displayName) => {
     });
     navigate("/");
     toastSuccessNotify("Registered successfully!");
-    // console.log(userCredential);
+    console.log(userCredential);
   } catch (error) {
     toastErrorNotify(error.message);
     // alert(error.message);

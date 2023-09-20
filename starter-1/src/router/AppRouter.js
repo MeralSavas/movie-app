@@ -7,8 +7,6 @@ import MovieDetail from "../pages/MovieDetail";
 import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 
-//  route kullanacaksak ilk yapacagımız route yapısını browser router ile sarmalamak
-
 const AppRouter = () => {
   return (
     <BrowserRouter>

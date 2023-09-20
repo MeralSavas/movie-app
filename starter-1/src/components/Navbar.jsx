@@ -42,7 +42,6 @@ const Navbar = () => {
                   alt="user"
                   loading="lazy"
                   referrerPolicy="no-referrer"
-                  
                 />
               </span>
               <ul
