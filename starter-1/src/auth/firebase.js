@@ -49,7 +49,7 @@ export const createUser = async (email, password, navigate, displayName) => {
     });
     navigate("/");
     toastSuccessNotify("Registered successfully!");
-    console.log(userCredential);
+    // console.log(userCredential);
   } catch (error) {
     toastErrorNotify(error.message);
     // alert(error.message);
